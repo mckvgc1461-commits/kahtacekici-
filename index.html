@@ -1,73 +1,32 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta name="google-site-verification" content="aZK91QjTqpAsbQNn4EjMNsU3cL3nG3aIbieBYJF9QUc" />
-    <meta name="google-site-verification" content="googleb4224e991a92c20f" />
     <meta charset="UTF-8">
     <meta name="google-site-verification" content="googleb4224e991a92c20f" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kahta Çekici | Adıyaman Kahta 7/24 Yol Yardım | 0538 838 27 93</title>
-    <meta name="description" content="Adıyaman Kahta ve çevresinde 7/24 hızlı çekici ve oto kurtarma hizmeti. 0538 838 27 93 hemen ara!">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <style>
         body { margin: 0; padding: 0; font-family: sans-serif; }
         #map { height: 100vh; width: 100%; }
-        .popup-box { text-align: center; min-width: 150px; }
-        .btn-call { background: #28a745; color: white; padding: 12px; text-decoration: none; border-radius: 5px; display: block; margin-top: 10px; font-weight: bold; font-size: 16px; border: none; }
-        .phone-text { font-size: 18px; color: #333; font-weight: bold; margin: 10px 0; display: block; }
+        .popup-box { text-align: center; }
+        .btn-call { background: #28a745; color: white; padding: 12px; text-decoration: none; border-radius: 5px; display: block; margin-top: 10px; font-weight: bold; }
     </style>
 </head>
 <body>
-
 <div id="map"></div>
-
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
-    // Kahta Merkez Koordinatları
     var map = L.map('map').setView([37.7850, 38.6250], 14); 
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
-
-    var yer = {
-        "isim": "Adıyaman Kahta Çekici Hizmeti",
-        "tel": "0538 838 27 93",
-        "lat": 37.7850,
-        "lng": 38.6250,
-        "adres": "Kahta, Adıyaman"
-    };
-
-    var marker = L.marker([yer.lat, yer.lng]).addTo(map);
+    var marker = L.marker([37.7850, 38.6250]).addTo(map);
     marker.bindPopup(`
         <div class="popup-box">
-            <h3 style="margin:0;">${yer.isim}</h3>
-            <span class="phone-text">${yer.tel}</span>
+            <h3>Kahta Çekici Hizmeti</h3>
+            <p>0538 838 27 93</p>
             <a href="tel:05388382793" class="btn-call">📞 HEMEN ARA</a>
         </div>
     `).openPopup();
-
-    // Google Arama Sonuçları İçin Gizli SEO Kodları
-    var script = document.createElement('script');
-    script.type = "application/ld+json";
-    script.text = JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "AutoRepair",
-        "name": "Adıyaman Kahta Çekici Hizmeti",
-        "image": "https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png",
-        "telephone": "+905388382793",
-        "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Kahta",
-            "addressRegion": "Adıyaman",
-            "addressCountry": "TR"
-        },
-        "geo": {
-            "@type": "GeoCoordinates",
-            "latitude": 37.7850,
-            "longitude": 38.6250
-        },
-        "url": window.location.href,
-        "openingHours": "Mo-Su 00:00-23:59"
-    });
-    document.head.appendChild(script);
 </script>
 </body>
 </html>
