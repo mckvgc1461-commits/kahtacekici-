@@ -1,14 +1,10 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-
-<meta name="google-site-verification" content="aZK91QjTqpAsbQNn4EjMNsU3cL3nG3aIbieBYJF9QUc" />
-
-    
     <meta charset="UTF-8">
-    <meta name="google-site-verification" content="googleb4224e991a92c20f" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kahta Çekici | Adıyaman Kahta 7/24 Yol Yardım | 0538 838 27 93</title>
+    <meta name="google-site-verification" content="aZK91QjTqpAsbQNn4EjMNsU3cL3nG3aIbieBYJF9QUc" />
+    <title>Kahta Çekici | 7/24 Yol Yardım | 0538 838 27 93</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <style>
         body { margin: 0; padding: 0; font-family: sans-serif; }
@@ -18,19 +14,19 @@
     </style>
 </head>
 <body>
-<div id="map"></div>
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-<script>
-    var map = L.map('map').setView([37.7850, 38.6250], 14); 
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
-    var marker = L.marker([37.7850, 38.6250]).addTo(map);
-    marker.bindPopup(`
-        <div class="popup-box">
-            <h3>Kahta Çekici Hizmeti</h3>
-            <p>0538 838 27 93</p>
-            <a href="tel:05388382793" class="btn-call">📞 HEMEN ARA</a>
-        </div>
-    `).openPopup();
-</script>
+    <div id="map"></div>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script>
+        var map = L.map('map').setView([37.7850, 38.6250], 14); 
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
+        var marker = L.marker([37.7850, 38.6250]).addTo(map);
+        marker.bindPopup(`
+            <div class="popup-box">
+                <h3>Kahta Çekici</h3>
+                <p>0538 838 27 93</p>
+                <a href="tel:05388382793" class="btn-call">📞 HEMEN ARA</a>
+            </div>
+        `).openPopup();
+    </script>
 </body>
 </html>
